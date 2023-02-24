@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
+import '../styles/login.css';
 
 function Login() {
   const INITIAL_STATE = {
@@ -33,7 +34,7 @@ function Login() {
   };
 
   return (
-    <>
+    <div className="container">
       <h1>Login</h1>
       <label htmlFor="email">
         E-mail:
@@ -68,7 +69,7 @@ function Login() {
         Entrar
       </button>
       { redirect && <Redirect to="/meals" /> }
-    </>
+    </div>
   );
 }
 
